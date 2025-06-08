@@ -23,5 +23,10 @@ public class Projectile : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "Boundary")
+        {
+            Destroy(gameObject);
+        }
     }
 }
